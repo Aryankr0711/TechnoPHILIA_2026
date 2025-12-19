@@ -86,10 +86,5 @@ TechnoPHILIA_2026/
 - **Responsive Design**: Mobile-friendly layout
 - **Professional Styling**: Modern UI with gradients and hover effects
 
-## Contact
-For any queries regarding TechnoPHILIA'26, please contact:
-- **Email**: skrudrawar@mitaoe.ac.in, sneha.pokharkar@mitaoe.ac.in
-- **Phone**: +91 94218 51242, +91 98901 57594
-
 ---
 © 2026 TechnoPHILIA | Organized by MIT Academy of Engineering, Alandi
