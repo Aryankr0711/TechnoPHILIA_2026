@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+.header {
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.left-logos {
+  display: flex;
+  gap: 15px;
+  margin-left: 0;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.left-logos img[src="/ISA_logo.png"] {
+  height: 60px;
+  align-self: center;
+}
+
+.association-logos img[src="/ISA_logo.png"] {
+  height: 120px;
+}
+
+.right-logo .logo {
+  height: 50px;
+  margin-right: 0;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.navigation a:hover {
+  background-color: #f0f0f0;
+}
+
+.navigation a.active {
+  color: #1a237e;
+  box-shadow: 0 3px 8px rgba(26, 35, 126, 0.3);
+  background-color: #f8f9ff;
+}
+
+.hero-section {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/MIT_AOE.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.event-date {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #ffeb3b;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.organizers {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.venue {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.association-section {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  background: #FFD700;
+  color: #333;
+}
+
+.btn:hover {
+  background: #FFC107;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.association-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.association-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.association-logo {
+  height: 180px;
+  width: auto;
+}
+
+.footer {
+  background: #1a237e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.contact-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.coordinators-section h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.faculty-grid, .student-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.coordinator-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.coordinator-card h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.coordinator-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.coordinator-card a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.coordinator-card a:hover {
+  text-decoration: underline;
+}
+
+.key-dates-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  min-height: 80vh;
+}
+
+.key-dates-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.key-dates-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.key-dates-header h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.key-dates-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.dates-table-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+  padding: 3px;
+}
+
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dates-table th {
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
+  color: white;
+  padding: 25px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dates-table td {
+  padding: 25px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dates-table tr:hover td {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  transform: scale(1.02);
+}
+
+.dates-table tr:nth-child(even) td {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8eaf6 100%);
+}
+
+.dates-table tr:nth-child(odd) td {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+.dates-table td:first-child {
+  font-weight: 600;
+  color: #1a237e;
+}
+
+.dates-table td:last-child {
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .navigation ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .event-date {
+    font-size: 1.4rem;
+  }
+  
+  .organizers, .venue {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 250px;
+  }
+  
+  .association-title {
+    font-size: 2rem;
+  }
+  
+  .association-logo {
+    height: 120px;
+  }
+  
+  .faculty-grid, .student-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+  
+  .coordinators-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .key-dates-header h2 {
+    font-size: 2rem;
+  }
+  
+  .dates-table th, .dates-table td {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
