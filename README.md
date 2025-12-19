@@ -35,7 +35,7 @@ TechnoPHILIA'26 is the 9th National Level Poster Presentation & Project Competit
 
 ## Student Coordinators
 - **Aryan Kumar** - 202301070164@mitaoe.ac.in
-- **Amir Furquani** - 202301070165@mitaoe.ac.in
+- **Kanak Panchal** - 202301070135@mitaoe.ac.in
 
 ## Installation & Setup
 ```bash
