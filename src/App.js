@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Association from './components/Association';
 import KeyDates from './components/KeyDates';
+import Prizes from './components/Prizes';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
@@ -20,6 +21,7 @@ function App() {
         </>
       )}
       {activeSection === 'key-dates' && <KeyDates />}
+      {activeSection === 'prizes' && <Prizes />}
       {activeSection === 'contact' && <Contact />}
       <Footer />
     </div>

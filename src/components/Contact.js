@@ -39,6 +39,16 @@ const Contact = () => {
               <p>📞 +91 93272 94119</p>
               <p>✉️ <a href="mailto:202301070135@mitaoe.ac.in">202301070135@mitaoe.ac.in</a></p>
             </div>
+            <div className="coordinator-card">
+              <h4>Satish Swami</h4>
+              <p>📞 +91 93228 55846</p>
+              <p>✉️ <a href="mailto:satishswami125@gmail.com">satishswami125@gmail.com</a></p>
+            </div>
+            <div className="coordinator-card">
+              <h4>Shrutika Dhondge</h4>
+              <p>📞 +91 96991 06244</p>
+              <p>✉️ <a href="mailto:shrutikadhondge04@gmail.com">shrutikadhondge04@gmail.com</a></p>
+            </div>
           </div>
         </div>
       </div>
