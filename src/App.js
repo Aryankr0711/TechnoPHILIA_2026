@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Association from './components/Association';
+import AboutUs from './components/AboutUs';
 import KeyDates from './components/KeyDates';
 import Prizes from './components/Prizes';
 import Contact from './components/Contact';
@@ -20,6 +21,7 @@ function App() {
           <Association />
         </>
       )}
+      {activeSection === 'about-us' && <AboutUs />}
       {activeSection === 'key-dates' && <KeyDates />}
       {activeSection === 'prizes' && <Prizes />}
       {activeSection === 'contact' && <Contact />}

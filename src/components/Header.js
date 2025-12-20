@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = ({ activeSection, setActiveSection }) => {
-  const navItems = ['Home', 'Key Dates', 'Registration', 'Prizes', 'Contact Us'];
+  const navItems = ['Home', 'About us', 'Key Dates', 'Registration', 'Prizes', 'Contact Us'];
 
   const handleNavClick = (item, e) => {
     e.preventDefault();
@@ -11,6 +11,8 @@ const Header = ({ activeSection, setActiveSection }) => {
       setActiveSection('key-dates');
     } else if (item === 'Home') {
       setActiveSection('home');
+    } else if (item === 'About us') {
+      setActiveSection('about-us');
     } else if (item === 'Prizes') {
       setActiveSection('prizes');
     }
@@ -28,6 +30,7 @@ const Header = ({ activeSection, setActiveSection }) => {
           <ul>
             {navItems.map((item, index) => {
               const isActive = (item === 'Home' && activeSection === 'home') ||
+                             (item === 'About us' && activeSection === 'about-us') ||
                              (item === 'Key Dates' && activeSection === 'key-dates') ||
                              (item === 'Prizes' && activeSection === 'prizes') ||
                              (item === 'Contact Us' && activeSection === 'contact');

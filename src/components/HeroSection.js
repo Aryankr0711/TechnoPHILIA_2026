@@ -21,9 +21,10 @@ const HeroSection = () => {
           <div className="event-date">17th March 2026</div>
           <div className="organizers">Organised by IEEE Student Branch (STB60211939) and ISA</div>
           <div className="venue">MIT Academy of Engineering, Alandi(D), Pune, Maharashtra, India</div>
+          <div className="department">Department of Electronics and Telecommunication Engineering</div>
           <div className="hero-buttons">
-            <button className="btn registration-btn" onClick={handleRegistration}>Registration</button>
             <button className="btn download-btn" onClick={handleDownload}>Download Brochure</button>
+            <button className="btn registration-btn" onClick={handleRegistration}>Registration</button>
           </div>
         </div>
       </section>
