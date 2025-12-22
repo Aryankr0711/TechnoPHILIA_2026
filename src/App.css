@@ -686,15 +686,15 @@ body {
   }
   
   .logo {
-    height: 60px;
+    height: 20px;
   }
   
-  .left-logos img[src="/ISA_logo.png"] {
-    height: 40px;
+  .left-logos img[src="/NEW_ISA_Logo.jpg"] {
+    height: 20px;
   }
   
   .right-logo .logo {
-    height: 35px;
+    height: 20px;
   }
   
   .hero-content h1 {
