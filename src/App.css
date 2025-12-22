@@ -31,21 +31,25 @@ body {
 }
 
 .logo {
-  height: 100px;
+  height: 80px;
+  max-width: 140px;
   width: auto;
 }
 
-.left-logos img[src="/ISA_logo.png"] {
-  height: 60px;
+.left-logos img[src="/NEW_IEEE_Logo.jpg"] {
+  max-width: 180px;
+}
+
+.left-logos img[src="/NEW_ISA_Logo.jpg"] {
+  height: 70px;
   align-self: center;
 }
 
-.association-logos img[src="/ISA_logo.png"] {
-  height: 120px;
-}
+
 
 .right-logo .logo {
-  height: 50px;
+  height: 70px;
+  max-width: 200px;
   margin-right: 0;
 }
 
@@ -168,8 +172,17 @@ body {
 }
 
 .association-logo {
-  height: 180px;
+  height: 140px;
+  max-width: 200px;
   width: auto;
+}
+
+.association-logos img[src="/NEW_IEEE_Logo.jpg"] {
+  max-width: 250px;
+}
+
+.association-logos img[src="/NEW_ISA_Logo.jpg"] {
+  max-width: 250px;
 }
 
 .footer {
