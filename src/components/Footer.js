@@ -12,9 +12,9 @@ const Footer = () => {
         
         <div className="footer-section">
           <h4>Contact Information</h4>
-          <p>📧 info@mitaoe.ac.in</p>
-          <p>📞 +91-20-27475000</p>
-          <p>📍 Alandi(D), Pune - 412105</p>
+          <p>info@mitaoe.ac.in</p>
+          <p>+91-20-27475000</p>
+          <p>Alandi(D), Pune - 412105</p>
         </div>
         
         <div className="footer-section">
