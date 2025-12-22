@@ -122,6 +122,83 @@ const AboutUs = () => {
                   </ul>
                 </div>
               </div>
+
+              <div className="glimpses-section">
+                <h3>Glimpses of TechnoPHILIA 2024</h3>
+                <div className="photo-gallery">
+                  <div className="photo-item winner">
+                    <img src="/photos/photo1.jpeg" alt="Winner Team" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">🏆 1st Place</div>
+                      <h4>New Invention Innovators</h4>
+                      <p>Automatic Abdominal Retractor for Surgery</p>
+                    </div>
+                  </div>
+                  
+                  <div className="photo-item runner-up">
+                    <img src="/photos/photo2.jpeg" alt="2nd Runner Up" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">🥈 2nd Place</div>
+                      <h4>Team MESWCOE</h4>
+                      <p>Design and Development of Customised Battery Pack with PCM Cooling Arrangement</p>
+                    </div>
+                  </div>
+                  
+                  <div className="photo-item third-place">
+                    <img src="/photos/photo3.jpeg" alt="3rd Runner Up" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">🥉 3rd Place</div>
+                      <h4>PVG</h4>
+                      <p>Multipurpose Agriculture Rover</p>
+                    </div>
+                  </div>
+                  
+                  <div className="photo-item participant">
+                    <img src="/photos/photo4.jpeg" alt="Participant" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">🎖️ Participant</div>
+                      <h4>BIOCREW</h4>
+                      <p>Fire Resistant Botanic Resin Composite for Household Buildings</p>
+                    </div>
+                  </div>
+                  
+                  <div className="photo-item participant">
+                    <img src="/photos/photo5.jpeg" alt="Participant" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">🎖️ Participant</div>
+                      <h4>Retro_Active</h4>
+                      <p>Waste Classification and Management using Deep Learning</p>
+                    </div>
+                  </div>
+                  
+                  <div className="photo-item participant">
+                    <img src="/photos/photo7.jpeg" alt="Participant" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">🎖️ Participant</div>
+                      <h4>VLSI Developers</h4>
+                      <p>Design of Low Power and High Speed Generic Reversible BCD Adder on FPGA</p>
+                    </div>
+                  </div>
+                  
+                  <div className="photo-item participant last-participant">
+                    <img src="/photos/photo9.jpeg" alt="Participant" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">🎖️ Participant</div>
+                      <h4>SKYFLYERS</h4>
+                      <p>RISAT-1 Satellite Re-entry Prediction and Simulation</p>
+                    </div>
+                  </div>
+                  
+                  <div className="photo-item coordinators">
+                    <img src="/photos/photo8_team.jpeg" alt="Team Coordinators" />
+                    <div className="photo-overlay">
+                      <div className="award-badge">👥 Coordinators</div>
+                      <h4>TechnoPHILIA 2024 Team</h4>
+                      <p>Event Coordinators & Organizers</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>

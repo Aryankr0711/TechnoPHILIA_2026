@@ -571,6 +571,166 @@ body {
   margin-top: 40px;
 }
 
+.glimpses-section {
+  margin-top: 50px;
+}
+
+.glimpses-section h3 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.photo-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background: white;
+}
+
+.photo-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  filter: brightness(0.9);
+}
+
+.photo-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+  color: white;
+  padding: 25px 20px;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+
+.award-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.winner {
+  border: 3px solid #FFD700;
+}
+
+.winner .award-badge {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #333;
+  animation: glow-gold 2s ease-in-out infinite alternate;
+}
+
+.runner-up {
+  border: 3px solid #C0C0C0;
+}
+
+.runner-up .award-badge {
+  background: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%);
+  color: #333;
+  animation: glow-silver 2s ease-in-out infinite alternate;
+}
+
+.third-place {
+  border: 3px solid #CD7F32;
+}
+
+.third-place .award-badge {
+  background: linear-gradient(135deg, #CD7F32 0%, #B8860B 100%);
+  color: white;
+  animation: glow-bronze 2s ease-in-out infinite alternate;
+}
+
+.participant {
+  border: 2px solid #1a237e;
+}
+
+.participant .award-badge {
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
+  color: white;
+}
+
+.coordinators {
+  grid-column: span 2;
+  border: 3px solid #4CAF50;
+}
+
+.last-participant {
+  grid-column: 1 / -1;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.coordinators img {
+  height: 350px;
+}
+
+.coordinators .award-badge {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+}
+
+.photo-overlay h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #FFD700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-weight: bold;
+}
+
+.photo-overlay p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+@keyframes glow-gold {
+  from { box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
+  to { box-shadow: 0 4px 25px rgba(255, 215, 0, 0.6); }
+}
+
+@keyframes glow-silver {
+  from { box-shadow: 0 4px 15px rgba(192, 192, 192, 0.3); }
+  to { box-shadow: 0 4px 25px rgba(192, 192, 192, 0.6); }
+}
+
+@keyframes glow-bronze {
+  from { box-shadow: 0 4px 15px rgba(205, 127, 50, 0.3); }
+  to { box-shadow: 0 4px 25px rgba(205, 127, 50, 0.6); }
+}
+
 .about-intro p {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -802,6 +962,27 @@ body {
     width: 200px;
     padding: 10px 20px;
     font-size: 1rem;
+  }
+  
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .coordinators {
+    grid-column: span 1;
+  }
+  
+  .photo-item img {
+    height: 220px;
+  }
+  
+  .coordinators img {
+    height: 280px;
+  }
+  
+  .photo-item:hover {
+    transform: translateY(-5px) scale(1.01);
   }
   
   .about-content {
