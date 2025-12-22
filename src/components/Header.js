@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Header = ({ activeSection, setActiveSection }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navItems = ['Home', 'About us', 'Key Dates', 'Registration', 'Prizes', 'Contact Us'];
 
   const handleNavClick = (item, e) => {
@@ -16,17 +17,53 @@ const Header = ({ activeSection, setActiveSection }) => {
     } else if (item === 'Prizes') {
       setActiveSection('prizes');
     }
+    setIsSidebarOpen(false);
   };
 
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="left-logos">
-          <img src="/IEEE Logo.png" alt="IEEE Logo" className="logo" />
-          <img src="/ISA_logo.png" alt="ISA Logo" className="logo" />
+    <>
+      <header className="header">
+        <div className="header-container">
+          <div className="left-logos">
+            <img src="/IEEE Logo.png" alt="IEEE Logo" className="logo" />
+            <img src="/ISA_logo.png" alt="ISA Logo" className="logo" />
+          </div>
+          
+          <nav className="navigation desktop-nav">
+            <ul>
+              {navItems.map((item, index) => {
+                const isActive = (item === 'Home' && activeSection === 'home') ||
+                               (item === 'About us' && activeSection === 'about-us') ||
+                               (item === 'Key Dates' && activeSection === 'key-dates') ||
+                               (item === 'Prizes' && activeSection === 'prizes') ||
+                               (item === 'Contact Us' && activeSection === 'contact');
+                return (
+                  <li key={index}>
+                    <a href="#" className={isActive ? 'active' : ''} onClick={(e) => handleNavClick(item, e)}>{item}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+          
+          <button className="mobile-menu-btn" onClick={() => setIsSidebarOpen(true)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <div className="right-logo">
+            <img src="/MIT_AOE_LOGO.png" alt="MIT AOE Logo" className="logo" />
+          </div>
         </div>
-        
-        <nav className="navigation">
+      </header>
+      
+      <div className={`sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+        <div className="sidebar-header">
+          <h3>TechnoPHILIA'26</h3>
+          <button className="close-btn" onClick={() => setIsSidebarOpen(false)}>&times;</button>
+        </div>
+        <nav className="sidebar-nav">
           <ul>
             {navItems.map((item, index) => {
               const isActive = (item === 'Home' && activeSection === 'home') ||
@@ -42,12 +79,10 @@ const Header = ({ activeSection, setActiveSection }) => {
             })}
           </ul>
         </nav>
-        
-        <div className="right-logo">
-          <img src="/MIT_AOE_LOGO.png" alt="MIT AOE Logo" className="logo" />
-        </div>
       </div>
-    </header>
+      
+      {isSidebarOpen && <div className="sidebar-overlay" onClick={() => setIsSidebarOpen(false)}></div>}
+    </>
   );
 };
 

@@ -55,6 +55,99 @@ body {
   gap: 30px;
 }
 
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mobile-menu-btn span {
+  width: 20px;
+  height: 2px;
+  background: #333;
+  margin: 2px 0;
+  transition: 0.3s;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar-open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar-header h3 {
+  color: #1a237e;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.sidebar-nav a:hover {
+  background: #f0f0f0;
+}
+
+.sidebar-nav a.active {
+  background: #1a237e;
+  color: white;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
 .navigation a {
   text-decoration: none;
   color: #222;
@@ -173,10 +266,57 @@ body {
 }
 
 .footer {
-  background: #1a237e;
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
   color: white;
-  padding: 20px;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
   text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+  color: #FFD700;
+}
+
+.footer-section h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #FFD700;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .footer-content {
@@ -497,38 +637,87 @@ body {
 
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap: 15px;
+    padding: 0 10px;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+    order: 1;
+  }
+  
+  .left-logos {
+    order: 2;
+  }
+  
+  .right-logo {
+    order: 3;
   }
   
   .navigation ul {
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .navigation a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .left-logos img[src="/ISA_logo.png"] {
+    height: 40px;
+  }
+  
+  .right-logo .logo {
+    height: 35px;
   }
   
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
   .event-date {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   
-  .organizers, .venue, .department {
+  .organizers {
+    font-size: 1.1rem;
+  }
+  
+  .venue, .department {
     font-size: 1rem;
   }
   
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
   
   .btn {
-    width: 250px;
+    width: 280px;
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  .association-section {
+    padding: 40px 15px;
   }
   
   .association-title {
@@ -539,24 +728,113 @@ body {
     height: 120px;
   }
   
-  .faculty-grid, .student-grid {
+  .about-section, .key-dates-section, .contact-section {
+    padding: 50px 15px;
+  }
+  
+  .about-content {
+    padding: 25px;
+  }
+  
+  .about-header h2, .key-dates-header h2, .contact-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-intro p {
+    font-size: 1.1rem;
+  }
+  
+  .programs-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   
-  .contact-header h2 {
-    font-size: 2rem;
+  .program-item {
+    padding: 15px;
+    font-size: 1rem;
   }
   
-  .coordinators-section h3 {
-    font-size: 1.5rem;
+  .vision-box, .mission-box {
+    padding: 20px;
   }
   
-  .key-dates-header h2 {
-    font-size: 2rem;
+  .dates-table-container {
+    margin: 0 10px;
   }
   
   .dates-table th, .dates-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .dates-table th {
+    font-size: 1.1rem;
+  }
+  
+  .faculty-grid, .student-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .coordinator-card {
+    padding: 20px;
+  }
+  
+  .coordinators-section h3 {
+    font-size: 1.6rem;
+  }
+  
+  .footer {
+    padding: 40px 15px 20px;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .footer-section {
+    padding: 20px;
+  }
+  
+  .footer-logo {
+    height: 60px;
+  }
+  
+  .footer-section h3, .footer-section h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.1rem;
+  }
+  
+  .event-date {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    width: 250px;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .about-header h2, .key-dates-header h2, .contact-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .dates-table th, .dates-table td {
+    padding: 8px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .footer-section {
     padding: 15px;
-    font-size: 1rem;
   }
 }
