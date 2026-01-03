@@ -70,7 +70,7 @@ const Registration = () => {
                   <ul>
                     <li>Registration opens: 15th January 2026</li>
                     <li>Registration closes: 28th February 2026</li>
-                    <li>Competition date: 17th March 2026</li>
+                    <li>Competition date: 27th March 2026</li>
                     <li>Venue: MIT Academy of Engineering, Alandi(D), Pune</li>
                     <li>Categories: Poster Presentation & Project Competition</li>
                   </ul>
