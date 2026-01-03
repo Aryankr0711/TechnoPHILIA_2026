@@ -15,23 +15,12 @@ const Footer = () => {
           <p>info@mitaoe.ac.in</p>
           <p>+91-20-27475000</p>
           <p>Alandi(D), Pune - 412105</p>
-          <div className="map-container">
-            <a 
-              href="https://www.google.com/maps/search/MIT+Academy+of+Engineering+Alandi+Pune" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="location-link"
-            >
-              <span className="location-icon">📍</span>
-              <span>View on Maps</span>
-            </a>
-          </div>
         </div>
         
         <div className="footer-section">
           <h4>TechnoPHILIA'26</h4>
           <p>9th National Level Competition</p>
-          <p>March 17, 2026</p>
+          <p>March 27, 2026</p>
           <p>Organized by IEEE & ISA</p>
         </div>
       </div>

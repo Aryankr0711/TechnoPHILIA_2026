@@ -14,6 +14,8 @@ const Header = ({ activeSection, setActiveSection }) => {
       setActiveSection('home');
     } else if (item === 'About us') {
       setActiveSection('about-us');
+    } else if (item === 'Registration') {
+      setActiveSection('registration');
     } else if (item === 'Prizes') {
       setActiveSection('prizes');
     }
@@ -25,8 +27,9 @@ const Header = ({ activeSection, setActiveSection }) => {
       <header className="header">
         <div className="header-container">
           <div className="left-logos">
-            <img src="/NEW_IEEE_Logo.png" alt="IEEE Logo" className="logo" />
             <img src="/NEW_ISA_Logo.png" alt="ISA Logo" className="logo" />
+            <img src="/NEW_IEEE_Logo.png" alt="IEEE Logo" className="logo" />
+            
           </div>
           
           <nav className="navigation desktop-nav">
@@ -35,6 +38,7 @@ const Header = ({ activeSection, setActiveSection }) => {
                 const isActive = (item === 'Home' && activeSection === 'home') ||
                                (item === 'About us' && activeSection === 'about-us') ||
                                (item === 'Key Dates' && activeSection === 'key-dates') ||
+                               (item === 'Registration' && activeSection === 'registration') ||
                                (item === 'Prizes' && activeSection === 'prizes') ||
                                (item === 'Contact Us' && activeSection === 'contact');
                 return (
@@ -69,6 +73,7 @@ const Header = ({ activeSection, setActiveSection }) => {
               const isActive = (item === 'Home' && activeSection === 'home') ||
                              (item === 'About us' && activeSection === 'about-us') ||
                              (item === 'Key Dates' && activeSection === 'key-dates') ||
+                             (item === 'Registration' && activeSection === 'registration') ||
                              (item === 'Prizes' && activeSection === 'prizes') ||
                              (item === 'Contact Us' && activeSection === 'contact');
               return (

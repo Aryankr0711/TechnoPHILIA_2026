@@ -28,7 +28,7 @@ const KeyDates = () => {
               </tr>
               <tr>
                 <td>Competition date</td>
-                <td>17th March 2026</td>
+                <td>27th March 2026</td>
               </tr>
             </tbody>
           </table>

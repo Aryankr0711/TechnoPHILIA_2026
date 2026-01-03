@@ -18,8 +18,8 @@ const HeroSection = () => {
         <div className="hero-content">
           <h1>TechnoPHILIA'26</h1>
           <h2>9th National Level Poster Presentation & Project Competition</h2>
-          <div className="event-date">17th March 2026</div>
-          <div className="organizers">Organised by IEEE Student Branch (STB60211939) and ISA</div>
+          <div className="event-date">27th March 2026</div>
+          <div className="organizers">Organised by ISA Pune Section and IEEE Student Branch (STB60211939)</div>
           <div className="venue">MIT Academy of Engineering, Alandi(D), Pune, Maharashtra, India</div>
           <div className="department">Department of Electronics and Telecommunication Engineering</div>
           <div className="hero-buttons">
