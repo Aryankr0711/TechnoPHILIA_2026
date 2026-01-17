@@ -24,6 +24,12 @@ const AboutUs = () => {
           >
             TechnoPHILIA
           </button>
+          <button 
+            className={`tab-btn ${activeTab === 'supista' ? 'active' : ''}`}
+            onClick={() => setActiveTab('supista')}
+          >
+            SUPISTA
+          </button>
         </div>
 
         <div className="about-content">
@@ -644,6 +650,59 @@ const AboutUs = () => {
                     <p>Photos for {activeYear} will be added soon!</p>
                   </div>
                 )}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'supista' && (
+            <div className="supista-content">
+              <div className="about-intro">
+                <h3>SUPISTA – Our Proud Sponsor</h3>
+                <p>
+                  A major highlight of Technophilia'26 is the support of our sponsor SUPISTA — a company dedicated to empowering businesses through data-driven insights and innovation. Supista believes that data is the key to unlocking growth, and through advanced business intelligence solutions, they help organisations convert complex data into meaningful insights and smarter decisions.
+                </p>
+                <p>
+                  By supporting Technophilia'26, SUPISTA actively encourages young innovators to explore emerging technologies, build impactful projects, and present research-driven ideas that can shape the future. Their vision strongly aligns with the spirit of Technophilia — Ignite. Innovate. Inspire.
+                </p>
+                <p>
+                  With this collaboration, Technophilia'26 becomes more than just a competition — it becomes a platform where students connect with real-world innovation and industry-driven thinking.
+                </p>
+              </div>
+
+              <div className="prizes-benefits">
+                <h3>🏆 Prizes & Recognition</h3>
+                <div className="benefits-box">
+                  <div className="prize-items">
+                    <div className="prize-item">
+                      <span className="prize-icon">✨</span>
+                      <div className="prize-text">
+                        <h4>Exciting Prizes</h4>
+                        <p>Money up to ₹15,000</p>
+                      </div>
+                    </div>
+                    <div className="prize-item">
+                      <span className="prize-icon">🎁</span>
+                      <div className="prize-text">
+                        <h4>Special Goodies</h4>
+                        <p>For winners</p>
+                      </div>
+                    </div>
+                    <div className="prize-item">
+                      <span className="prize-icon">💼</span>
+                      <div className="prize-text">
+                        <h4>Internship Opportunity</h4>
+                        <p>The winning team may get the internship opportunity</p>
+                      </div>
+                    </div>
+                    <div className="prize-item">
+                      <span className="prize-icon">📜</span>
+                      <div className="prize-text">
+                        <h4>Certificates</h4>
+                        <p>For all participants</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}

@@ -56,10 +56,69 @@ const Registration = () => {
                   </button>
                   <button 
                     className="btn"
-                    onClick={() => window.open('/TechnoPHILIA 24_MITAOE.pdf', '_blank')}
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/brochure.pdf';
+                      link.download = 'brochure.pdf';
+                      link.click();
+                    }}
                   >
                     Download Brochure
                   </button>
+                </div>
+              </div>
+
+              <div className="tracks-section">
+                <h3>Conference Tracks</h3>
+                <div className="tracks-grid">
+                  <div className="track-item">
+                    <div className="track-number">Track 1</div>
+                    <h4>Artificial Intelligence and Machine Learning</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 2</div>
+                    <h4>Communication Systems and Networks</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 3</div>
+                    <h4>Internet of Things (IoT) and Smart Systems</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 4</div>
+                    <h4>Signal and Image Processing</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 5</div>
+                    <h4>Embedded Systems and VLSI</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 6</div>
+                    <h4>Cyber Security and Blockchain</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 7</div>
+                    <h4>Data Science and Big Data Analytics</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 8</div>
+                    <h4>Cloud, Edge, and Fog Computing</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 9</div>
+                    <h4>5G/6G Technologies</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 10</div>
+                    <h4>Robotics and Intelligent Systems</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 11</div>
+                    <h4>Power, Energy, and Sustainable Technologies</h4>
+                  </div>
+                  <div className="track-item">
+                    <div className="track-number">Track 12</div>
+                    <h4>Biomedical Signal Processing and Healthcare Technologies</h4>
+                  </div>
                 </div>
               </div>
 

@@ -29,7 +29,7 @@ const Header = ({ activeSection, setActiveSection }) => {
           <div className="left-logos">
             <img src="/NEW_ISA_Logo.png" alt="ISA Logo" className="logo" />
             <img src="/NEW_IEEE_Logo.png" alt="IEEE Logo" className="logo" />
-            
+            <img src="/supista_logo.png" alt="Supista Logo" className="logo" />
           </div>
           
           <nav className="navigation desktop-nav">
