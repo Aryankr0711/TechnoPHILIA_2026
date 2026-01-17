@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('mitaoe');
+  const [activeYear, setActiveYear] = useState('2024');
 
   return (
     <section id="about-us" className="about-section">
@@ -124,80 +125,525 @@ const AboutUs = () => {
               </div>
 
               <div className="glimpses-section">
-                <h3>Glimpses of TechnoPHILIA 2024</h3>
-                <div className="photo-gallery">
-                  <div className="photo-item winner">
-                    <img src="/photos/photo1.jpeg" alt="Winner Team" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">🏆 1st Place</div>
-                      <h4>New Invention Innovators</h4>
-                      <p>Automatic Abdominal Retractor for Surgery</p>
-                    </div>
-                  </div>
-                  
-                  <div className="photo-item runner-up">
-                    <img src="/photos/photo2.jpeg" alt="2nd Runner Up" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">🥈 2nd Place</div>
-                      <h4>Team MESWCOE</h4>
-                      <p>Design and Development of Customised Battery Pack with PCM Cooling Arrangement</p>
-                    </div>
-                  </div>
-                  
-                  <div className="photo-item third-place">
-                    <img src="/photos/photo3.jpeg" alt="3rd Runner Up" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">🥉 3rd Place</div>
-                      <h4>PVG</h4>
-                      <p>Multipurpose Agriculture Rover</p>
-                    </div>
-                  </div>
-                  
-                  <div className="photo-item participant">
-                    <img src="/photos/photo4.jpeg" alt="Participant" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">🎖️ Participant</div>
-                      <h4>BIOCREW</h4>
-                      <p>Fire Resistant Botanic Resin Composite for Household Buildings</p>
-                    </div>
-                  </div>
-                  
-                  <div className="photo-item participant">
-                    <img src="/photos/photo5.jpeg" alt="Participant" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">🎖️ Participant</div>
-                      <h4>Retro_Active</h4>
-                      <p>Waste Classification and Management using Deep Learning</p>
-                    </div>
-                  </div>
-                  
-                  <div className="photo-item participant">
-                    <img src="/photos/photo7.jpeg" alt="Participant" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">🎖️ Participant</div>
-                      <h4>VLSI Developers</h4>
-                      <p>Design of Low Power and High Speed Generic Reversible BCD Adder on FPGA</p>
-                    </div>
-                  </div>
-                  
-                  <div className="photo-item participant last-participant">
-                    <img src="/photos/photo9.jpeg" alt="Participant" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">🎖️ Participant</div>
-                      <h4>SKYFLYERS</h4>
-                      <p>RISAT-1 Satellite Re-entry Prediction and Simulation</p>
-                    </div>
-                  </div>
-                  
-                  <div className="photo-item coordinators">
-                    <img src="/photos/photo8_team.jpeg" alt="Team Coordinators" />
-                    <div className="photo-overlay">
-                      <div className="award-badge">👥 Coordinators</div>
-                      <h4>TechnoPHILIA 2024 Team</h4>
-                      <p>Event Coordinators & Organizers</p>
-                    </div>
-                  </div>
+                <h3>Glimpses of TechnoPHILIA</h3>
+                <div className="year-buttons">
+                  {['2024', '2023', '2021', '2019', '2018', '2017'].map(year => (
+                    <button 
+                      key={year}
+                      className={`year-btn ${activeYear === year ? 'active' : ''}`}
+                      onClick={() => setActiveYear(year)}
+                    >
+                      {year}
+                    </button>
+                  ))}
                 </div>
+                {activeYear === '2024' && (
+                  <div className="photo-gallery">
+                    <div className="photo-item winner">
+                      <img src="/photos/photo1.jpeg" alt="Winner Team" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🏆 1st Place</div>
+                        <h4>New Invention Innovators</h4>
+                        <p>Automatic Abdominal Retractor for Surgery</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item runner-up">
+                      <img src="/photos/photo2.jpeg" alt="2nd Runner Up" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥈 2nd Place</div>
+                        <h4>Team MESWCOE</h4>
+                        <p>Design and Development of Customised Battery Pack with PCM Cooling Arrangement</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item third-place">
+                      <img src="/photos/photo3.jpeg" alt="3rd Runner Up" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥉 3rd Place</div>
+                        <h4>PVG</h4>
+                        <p>Multipurpose Agriculture Rover</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item participant">
+                      <img src="/photos/photo4.jpeg" alt="Participant" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🎖️ Participant</div>
+                        <h4>BIOCREW</h4>
+                        <p>Fire Resistant Botanic Resin Composite for Household Buildings</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item participant">
+                      <img src="/photos/photo5.jpeg" alt="Participant" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🎖️ Participant</div>
+                        <h4>Retro_Active</h4>
+                        <p>Waste Classification and Management using Deep Learning</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item participant">
+                      <img src="/photos/photo7.jpeg" alt="Participant" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🎖️ Participant</div>
+                        <h4>VLSI Developers</h4>
+                        <p>Design of Low Power and High Speed Generic Reversible BCD Adder on FPGA</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item participant last-participant">
+                      <img src="/photos/photo9.jpeg" alt="Participant" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🎖️ Participant</div>
+                        <h4>SKYFLYERS</h4>
+                        <p>RISAT-1 Satellite Re-entry Prediction and Simulation</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item coordinators">
+                      <img src="/photos/photo8_team.jpeg" alt="Team Coordinators" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">👥 Coordinators</div>
+                        <h4>TechnoPHILIA 2024 Team</h4>
+                        <p>Event Coordinators & Organizers</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeYear === '2017' && (
+                  <div className="photo-gallery">
+                    <div className="photo-item">
+                      <img src="/photos/2017/1.png" alt="Inauguration 2017" />
+                      <div className="photo-overlay">
+                        <h4>Inauguration</h4>
+                        <p>TechnoPHILIA 2017</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2017/2.png" alt="Inauguration 2017" />
+                      <div className="photo-overlay">
+                        <h4>Inauguration</h4>
+                        <p>TechnoPHILIA 2017</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2017/4.png" alt="Judges with participants" />
+                      <div className="photo-overlay">
+                        <h4>Judges & Participants</h4>
+                        <p>Paper presentation & project competition</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2017/5.png" alt="Judges with participants" />
+                      <div className="photo-overlay">
+                        <h4>Judges & Participants</h4>
+                        <p>Paper presentation & project competition</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2017/6.png" alt="Faculty and participants" />
+                      <div className="photo-overlay">
+                        <h4>Faculty & Participants</h4>
+                        <p>Mr. Ravi Maknikar, Mrs. Shilpa Rudrawar, Mr. Pramod Ubare, Mr. Sagar Shinde</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2017/7.png" alt="Felicitation ceremony" />
+                      <div className="photo-overlay">
+                        <h4>Felicitation Ceremony</h4>
+                        <p>Dr. M. D. Goudar felicitating Mr. Rupesh Gupta, Managing Director, Klug Avelon</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2017/8.png" alt="Panel of judges" />
+                      <div className="photo-overlay">
+                        <h4>Panel of Judges</h4>
+                        <p>Dr. M. D. Goudar, Mr. Sandeep Shroff, Mr. Rupesh Gupta, Mr. Ravi Maknikar, Mr. Bhushan Pawar</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2017/new.png" alt="Prize winners" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥈 2nd Place</div>
+                        <h4>Prize Winners</h4>
+                        <p>Rameel Khan and Abhay Bhujbal</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeYear === '2018' && (
+                  <div className="photo-gallery">
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (1).png" alt="Inauguration 2018" />
+                      <div className="photo-overlay">
+                        <h4>Inauguration</h4>
+                        <p>TechnoPHILIA 2018</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (2).png" alt="Inauguration 2018" />
+                      <div className="photo-overlay">
+                        <h4>Inauguration</h4>
+                        <p>TechnoPHILIA 2018</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (3).png" alt="Judges 2018" />
+                      <div className="photo-overlay">
+                        <h4>Judges of TechnoPHILIA 2018</h4>
+                        <p>Mr. Amit Saxena, Mr. Aloukh Pawar, Mr. Ramani Iyer, Mr.Anand Iyer, Mr. Vinod Joshi, Mr. Sandeep Shroff, Mrs. Shilpa Rudrawar</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/18.png" alt="Paper presentation judges" />
+                      <div className="photo-overlay">
+                        <h4>Judges of Paper Presentation</h4>
+                        <p>Mr. Sandeep Shroff, Mr. Vinod Joshi, Mr. Ramani Iyer</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (4).png" alt="Participant presenting" />
+                      <div className="photo-overlay">
+                        <h4>Paper Presentation</h4>
+                        <p>Participant presenting paper</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (5).png" alt="Participant presenting" />
+                      <div className="photo-overlay">
+                        <h4>Paper Presentation</h4>
+                        <p>Participant presenting paper</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (6).png" alt="Skype presentation" />
+                      <div className="photo-overlay">
+                        <h4>Skype Presentation</h4>
+                        <p>Remote presentation session</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (7).png" alt="Project evaluation" />
+                      <div className="photo-overlay">
+                        <h4>Project Competition Judges</h4>
+                        <p>Mr. Amit Saxena, Mr. Aloukh Pawar, Mr.Anand Iyer</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (8).png" alt="Project demonstration" />
+                      <div className="photo-overlay">
+                        <h4>Project Demonstration</h4>
+                        <p>Participants demonstrating their project</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (9).png" alt="Project demonstration" />
+                      <div className="photo-overlay">
+                        <h4>Project Demonstration</h4>
+                        <p>Participants demonstrating their project</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item winner">
+                      <img src="/photos/2018/1 (10).png" alt="1st prize winner" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🏆 1st Place</div>
+                        <h4>Project Competition Winner</h4>
+                        <p>1st Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item runner-up">
+                      <img src="/photos/2018/1 (11).png" alt="2nd prize winner" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥈 2nd Place</div>
+                        <h4>Project Competition Winner</h4>
+                        <p>2nd Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item third-place">
+                      <img src="/photos/2018/1 (12).png" alt="3rd prize winner" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥉 3rd Place</div>
+                        <h4>Project Competition Winner</h4>
+                        <p>3rd Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (13).png" alt="All participants" />
+                      <div className="photo-overlay">
+                        <h4>Group Photo</h4>
+                        <p>All participants, Judges and team TechnoPHILIA</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2018/1 (14).png" alt="All participants" />
+                      <div className="photo-overlay">
+                        <h4>Group Photo</h4>
+                        <p>All participants, Judges and team TechnoPHILIA</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item winner">
+                      <img src="/photos/2018/1 (15).png" alt="Paper presentation 1st prize" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🏆 1st Place</div>
+                        <h4>Paper Presentation Winner</h4>
+                        <p>1st Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item runner-up">
+                      <img src="/photos/2018/1 (16).png" alt="Paper presentation 2nd prize" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥈 2nd Place</div>
+                        <h4>Paper Presentation Winner</h4>
+                        <p>2nd Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item third-place">
+                      <img src="/photos/2018/1 (17).png" alt="Paper presentation 3rd prize" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥉 3rd Place</div>
+                        <h4>Paper Presentation Winner</h4>
+                        <p>3rd Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item coordinators">
+                      <img src="/photos/2018/19.png" alt="Team TechnoPHILIA" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">👥 Team</div>
+                        <h4>Team TechnoPHILIA</h4>
+                        <p>Event organizers and coordinators</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeYear === '2019' && (
+                  <div className="photo-gallery">
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (1).png" alt="Inauguration 2019" />
+                      <div className="photo-overlay">
+                        <h4>Inauguration</h4>
+                        <p>TechnoPHILIA 2019</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (2).png" alt="Inauguration 2019" />
+                      <div className="photo-overlay">
+                        <h4>Inauguration</h4>
+                        <p>TechnoPHILIA 2019</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (3).png" alt="Judges 2019" />
+                      <div className="photo-overlay">
+                        <h4>Judges of TechnoPHILIA 2019</h4>
+                        <p>Mr. Ravi Maknikar, Mr. Ramani Iyer, Mr. Vinod Joshi, Mr. Milind Thuse with Team TechnoPHILIA</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (4).png" alt="Paper presentation judges" />
+                      <div className="photo-overlay">
+                        <h4>Judges of Paper Presentation</h4>
+                        <p>Mr. Ravi Maknikar, Mr. Ramani Iyer</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (5).png" alt="Participant presenting" />
+                      <div className="photo-overlay">
+                        <h4>Paper Presentation</h4>
+                        <p>Participant presenting paper</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (6).png" alt="Skype presentation" />
+                      <div className="photo-overlay">
+                        <h4>Skype Presentation</h4>
+                        <p>Remote presentation session</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (7).png" alt="Skype presentation" />
+                      <div className="photo-overlay">
+                        <h4>Skype Presentation</h4>
+                        <p>Remote presentation session</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (8).png" alt="Project demonstration" />
+                      <div className="photo-overlay">
+                        <h4>Project Demonstration</h4>
+                        <p>Participants demonstrating their project to judge Mr. Milind Thuse</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (9).png" alt="Project demonstration" />
+                      <div className="photo-overlay">
+                        <h4>Project Demonstration</h4>
+                        <p>Participants demonstrating their project to judge Mr. Vinod Joshi</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (10).png" alt="Project setup" />
+                      <div className="photo-overlay">
+                        <h4>Project Setup</h4>
+                        <p>Participants with their project setup</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item winner">
+                      <img src="/photos/2019/1 (11).png" alt="1st prize winner" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🏆 1st Place</div>
+                        <h4>Project Competition Winner</h4>
+                        <p>1st Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item runner-up">
+                      <img src="/photos/2019/1 (12).png" alt="2nd prize winner" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥈 2nd Place</div>
+                        <h4>Project Competition Winner</h4>
+                        <p>2nd Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item third-place">
+                      <img src="/photos/2019/1 (13).png" alt="3rd prize winner" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥉 3rd Place</div>
+                        <h4>Project Competition Winner</h4>
+                        <p>3rd Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item participant">
+                      <img src="/photos/2019/1 (14).png" alt="Consolation prize" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🎖️ Consolation</div>
+                        <h4>Project Competition</h4>
+                        <p>Consolation prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item winner">
+                      <img src="/photos/2019/1 (15).png" alt="Paper presentation 1st prize" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🏆 1st Place</div>
+                        <h4>Paper Presentation Winner</h4>
+                        <p>1st Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item third-place">
+                      <img src="/photos/2019/1 (16).png" alt="Paper presentation 3rd prize" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">🥉 3rd Place</div>
+                        <h4>Paper Presentation Winner</h4>
+                        <p>3rd Prize winner</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (17).png" alt="All participants" />
+                      <div className="photo-overlay">
+                        <h4>Group Photo</h4>
+                        <p>All participants, Judges and team TechnoPHILIA</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item">
+                      <img src="/photos/2019/1 (18).png" alt="All participants" />
+                      <div className="photo-overlay">
+                        <h4>Group Photo</h4>
+                        <p>All participants, Judges and team TechnoPHILIA</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item coordinators">
+                      <img src="/photos/2019/1 (19).png" alt="Team TechnoPHILIA" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">👥 Team</div>
+                        <h4>Team TechnoPHILIA</h4>
+                        <p>Event organizers and coordinators</p>
+                      </div>
+                    </div>
+                    
+                    <div className="photo-item coordinators">
+                      <img src="/photos/2019/1(20).png" alt="Team TechnoPHILIA" />
+                      <div className="photo-overlay">
+                        <div className="award-badge">👥 Team</div>
+                        <h4>Team TechnoPHILIA</h4>
+                        <p>Event organizers and coordinators</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeYear === '2021' && (
+                  <div className="photo-gallery">
+                    {Array.from({length: 21}, (_, i) => i + 1).map(num => (
+                      <div key={num} className="photo-item">
+                        <img src={`/photos/2021/${num}.png`} alt={`TechnoPHILIA 2021 - ${num}`} />
+                        <div className="photo-overlay">
+                          <h4>TechnoPHILIA 2021</h4>
+                          <p>Event Photo {num}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {activeYear === '2023' && (
+                  <div className="photo-gallery">
+                    {Array.from({length: 5}, (_, i) => i + 1).map(num => (
+                      <div key={num} className="photo-item">
+                        <img src={`/photos/2023/${num}.jpeg`} alt={`TechnoPHILIA 2023 - ${num}`} />
+                        <div className="photo-overlay">
+                          <h4>TechnoPHILIA 2023</h4>
+                          <p>Event Photo {num}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {activeYear !== '2024' && activeYear !== '2017' && activeYear !== '2018' && activeYear !== '2019' && activeYear !== '2021' && activeYear !== '2023' && (
+                  <div className="coming-soon">
+                    <p>Photos for {activeYear} will be added soon!</p>
+                  </div>
+                )}
               </div>
             </div>
           )}
