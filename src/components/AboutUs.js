@@ -669,41 +669,6 @@ const AboutUs = () => {
                 </p>
               </div>
 
-              <div className="prizes-benefits">
-                <h3>🏆 Prizes & Recognition</h3>
-                <div className="benefits-box">
-                  <div className="prize-items">
-                    <div className="prize-item">
-                      <span className="prize-icon">✨</span>
-                      <div className="prize-text">
-                        <h4>Exciting Prizes</h4>
-                        <p>Money up to ₹15,000</p>
-                      </div>
-                    </div>
-                    <div className="prize-item">
-                      <span className="prize-icon">🎁</span>
-                      <div className="prize-text">
-                        <h4>Special Goodies</h4>
-                        <p>For winners</p>
-                      </div>
-                    </div>
-                    <div className="prize-item">
-                      <span className="prize-icon">💼</span>
-                      <div className="prize-text">
-                        <h4>Internship Opportunity</h4>
-                        <p>The winning team may get the internship opportunity</p>
-                      </div>
-                    </div>
-                    <div className="prize-item">
-                      <span className="prize-icon">📜</span>
-                      <div className="prize-text">
-                        <h4>Certificates</h4>
-                        <p>For all participants</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
         </div>
