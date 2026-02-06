@@ -20,15 +20,15 @@ const KeyDates = () => {
             <tbody>
               <tr>
                 <td>Registration starts</td>
-                <td>15th Jan 2026</td>
+                <td>1ˢᵗ Feb 2026</td>
               </tr>
               <tr>
                 <td>Registration End</td>
-                <td>28th Feb 2026</td>
+                <td>20ᵗʰ March  2026</td>
               </tr>
               <tr>
                 <td>Competition date</td>
-                <td>27th March 2026</td>
+                <td>27ᵗʰ March 2026</td>
               </tr>
             </tbody>
           </table>

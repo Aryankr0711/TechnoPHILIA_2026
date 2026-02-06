@@ -25,6 +25,12 @@ const AboutUs = () => {
             TechnoPHILIA
           </button>
           <button 
+            className={`tab-btn ${activeTab === 'spark' ? 'active' : ''}`}
+            onClick={() => setActiveTab('spark')}
+          >
+            SPARK
+          </button>
+          <button 
             className={`tab-btn ${activeTab === 'supista' ? 'active' : ''}`}
             onClick={() => setActiveTab('supista')}
           >
@@ -93,12 +99,12 @@ const AboutUs = () => {
           {activeTab === 'technophilia' && (
             <div className="technophilia-content">
               <div className="about-intro">
-                <h3>TechnoPHILIA 2026 – Conference Overview</h3>
+                <h3>TechnoPHILIA 2026 – poster and project competition Overview</h3>
                 <p>
-                  TechnoPHILIA 2026 is a national-level technical conference organized by the SPARK Club, School of Electronics & Telecommunication Engineering, MIT Academy of Engineering (MITAOE), Alandi, Pune.
+                  TechnoPHILIA 2026 is a national-level technical poster and project competition organized by the SPARK Club, Department of Electronics & Telecommunication Engineering, MIT Academy of Engineering (MITAOE), Alandi, Pune.
                 </p>
                 <p>
-                  The event continues the legacy of TechnoPHILIA as a flagship annual technical conference, and 2026 marks the 9th edition of the TechnoPHILIA conference series.
+                  The event continues the legacy of TechnoPHILIA as a flagship annual technical poster and project competition, and 2026 marks the 9th edition of the TechnoPHILIA poster and project competition series.
                 </p>
               </div>
 
@@ -106,7 +112,7 @@ const AboutUs = () => {
                 <h3>Theme and Vision</h3>
                 <div className="theme-box">
                   <h4>Theme: Ignite. Innovate. Inspire.</h4>
-                  <p>The conference aims to:</p>
+                  <p>The poster and project competition aims to:</p>
                   <ul>
                     <li>Encourage innovation and creativity among young engineers</li>
                     <li>Provide a national platform for showcasing technical projects and research ideas</li>
@@ -123,7 +129,8 @@ const AboutUs = () => {
                   <ul>
                     <li>Opportunity to present projects to a national audience</li>
                     <li>Exciting prizes worth up to ₹15,000</li>
-                    <li>Certificates for all participants</li>
+                    <li>Winner team will get goodies, and may get the internship opportunities </li>
+                    <li>Certificates for all participants </li>
                     <li>Networking with industry professionals, faculty, and peers</li>
                     <li>Exposure to latest technological advancements</li>
                   </ul>
@@ -133,7 +140,7 @@ const AboutUs = () => {
               <div className="glimpses-section">
                 <h3>Glimpses of TechnoPHILIA</h3>
                 <div className="year-buttons">
-                  {['2024', '2023', '2021', '2019', '2018', '2017'].map(year => (
+                  {['2025', '2024', '2023', '2021', '2019', '2018', '2017'].map(year => (
                     <button 
                       key={year}
                       className={`year-btn ${activeYear === year ? 'active' : ''}`}
@@ -143,6 +150,19 @@ const AboutUs = () => {
                     </button>
                   ))}
                 </div>
+                {activeYear === '2025' && (
+                  <div className="photo-gallery">
+                    {Array.from({length: 7}, (_, i) => i + 1).map(num => (
+                      <div key={num} className="photo-item">
+                        <img src={`/photos/2025/${num}.jpeg`} alt={`TechnoPHILIA 2025 - ${num}`} />
+                        <div className="photo-overlay">
+                          <h4>TechnoPHILIA 2025</h4>
+                          <p>Event Photo {num}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {activeYear === '2024' && (
                   <div className="photo-gallery">
                     <div className="photo-item winner">
@@ -645,11 +665,31 @@ const AboutUs = () => {
                     ))}
                   </div>
                 )}
-                {activeYear !== '2024' && activeYear !== '2017' && activeYear !== '2018' && activeYear !== '2019' && activeYear !== '2021' && activeYear !== '2023' && (
+                {activeYear !== '2025' && activeYear !== '2024' && activeYear !== '2017' && activeYear !== '2018' && activeYear !== '2019' && activeYear !== '2021' && activeYear !== '2023' && (
                   <div className="coming-soon">
                     <p>Photos for {activeYear} will be added soon!</p>
                   </div>
                 )}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'spark' && (
+            <div className="spark-content">
+              <div className="about-intro">
+                <h3>SPARK Club – Driving Technical Excellence</h3>
+                <p>
+                  SPARK Club is a technical club at MIT Academy of Engineering that focuses on promoting practical learning, innovation, and technical excellence among students. The club actively works in the domains of Embedded Systems, Internet of Things (IoT), and VLSI, with the objective of bridging the gap between theoretical classroom learning and real-world technological applications.
+                </p>
+                <p>
+                  SPARK provides a collaborative platform where students can explore ideas, engage in hands-on projects, and develop industry-relevant skills beyond the academic curriculum. One of the major achievements of the club is the successful organization of Technophilia, an annual technical event conducted every year, featuring technical competitions, interactive challenges, and innovation-driven activities with strong student participation.
+                </p>
+                <p>
+                  In addition, SPARK has conducted orientation programs, hands-on workshops, and technical projects that help students enhance their practical knowledge, problem-solving abilities, teamwork, and leadership skills. A key strength of the club is its peer-mentorship culture, where senior members actively guide and support new members in learning technologies, completing projects, and adapting to the club's working environment.
+                </p>
+                <p>
+                  The club also supports academically strong and deserving students by facilitating opportunities such as ISA (International Society of Automation) membership, encouraging professional growth and global exposure. Through its continuous efforts, SPARK has established itself as an active technical club that promotes learning by doing and prepares students for future academic and professional challenges.
+                </p>
               </div>
             </div>
           )}

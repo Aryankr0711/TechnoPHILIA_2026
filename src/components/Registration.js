@@ -37,11 +37,11 @@ const Registration = () => {
               <div className="about-intro">
                 <h3>Register for TechnoPHILIA 2026</h3>
                 <p>
-                  Join us for the 9th edition of TechnoPHILIA, the premier national-level technical conference. 
+                  Join us for the 9ᵗʰ edition of TechnoPHILIA, the premier national-level technical conference. 
                   Register now to showcase your innovative projects and compete for exciting prizes worth up to ₹15,000.
                 </p>
                 <p>
-                  Registration is open from 15th January 2026 to 28th February 2026. Don't miss this opportunity to 
+                  Registration is open from 1ˢᵗ February 2026 to 20ᵗʰ March 2026. Don't miss this opportunity to 
                   present your work to a national audience and network with industry professionals.
                 </p>
               </div>
@@ -50,7 +50,7 @@ const Registration = () => {
                 <div className="hero-buttons">
                   <button 
                     className="btn"
-                    onClick={() => window.open('https://forms.google.com/your-registration-form', '_blank')}
+                    onClick={() => window.open('https://forms.gle/shMWauwRfedXerKk9', '_blank')}
                   >
                     Register Now
                   </button>
@@ -58,8 +58,8 @@ const Registration = () => {
                     className="btn"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = '/brochure.pdf';
-                      link.download = 'brochure.pdf';
+                      link.href = '/brochure_final.pdf';
+                      link.download = 'brochure_final.pdf';
                       link.click();
                     }}
                   >
@@ -94,9 +94,9 @@ const Registration = () => {
                 <div className="theme-box">
                   <h4>Important Information</h4>
                   <ul>
-                    <li>Registration opens: 15th January 2026</li>
-                    <li>Registration closes: 28th February 2026</li>
-                    <li>Competition date: 27th March 2026</li>
+                    <li>Registration opens: 1ˢᵗ February 2026</li>
+                    <li>Registration closes: 20ᵗʰ March 2026</li>
+                    <li>Competition date: 27ᵗʰ March 2026</li>
                     <li>Venue: MIT Academy of Engineering, Alandi(D), Pune</li>
                     <li>Categories: Poster Presentation & Project Competition</li>
                   </ul>
@@ -108,7 +108,7 @@ const Registration = () => {
           {activeTab === 'poster' && (
             <div className="guidelines-content">
               <div className="about-intro">
-                <h3>9th National Level Technical Event- Project competition and Poster Presentation</h3>
+                <h3>9ᵗʰ National Level Technical Event- Project competition and Poster Presentation</h3>
                 <h4>TechnoPHILIA'25</h4>
                 <h4>Guidelines for Poster Completion</h4>
               </div>

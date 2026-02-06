@@ -7,39 +7,123 @@ const Prizes = () => {
         <div className="prizes-header">
           <h2>🏆 Prizes & Recognition</h2>
           <p>Exciting rewards and opportunities await the most innovative minds at TechnoPHILIA 2026!</p>
+          <div className="total-prize-pool">
+            <span className="prize-amount">Total Prize Pool: ₹15,000+</span>
+          </div>
         </div>
         
         <div className="prizes-content">
-          <div className="prizes-benefits">
-            <div className="benefits-box">
-              <div className="prize-items">
-                <div className="prize-item">
-                  <span className="prize-icon">✨</span>
-                  <div className="prize-text">
-                    <h4>Exciting Prizes</h4>
-                    <p>Money up to ₹15,000</p>
-                  </div>
+          {/* Project Competition Section */}
+          <div className="competition-section">
+            <div className="section-header">
+              <h3>🚀 Project Competition</h3>
+              <p>Showcase your innovative projects and compete for exciting prizes</p>
+            </div>
+            
+            <div className="prize-tiers">
+              <div className="prize-tier first-place">
+                <div className="tier-header">
+                  <div className="rank-badge">🥇</div>
+                  <h4>First Prize</h4>
                 </div>
-                <div className="prize-item">
-                  <span className="prize-icon">🎁</span>
-                  <div className="prize-text">
-                    <h4>Special Goodies</h4>
-                    <p>For winners</p>
-                  </div>
+                <div className="prize-amount">₹10,000</div>
+                <div className="prize-details">
+                  <ul>
+                    <li>Cash Prize: ₹10,000</li>
+                    <li>Winner's Trophy</li>
+                    <li>Certificate of Excellence</li>
+                    <li>Special Goodies Package</li>
+                    <li>Internship Opportunity at SUPISTA</li>
+                    <li>Mentorship Session with Industry Experts</li>
+                  </ul>
                 </div>
-                <div className="prize-item">
-                  <span className="prize-icon">💼</span>
-                  <div className="prize-text">
-                    <h4>Internship Opportunity</h4>
-                    <p>The winning team may get the internship opportunity</p>
-                  </div>
+              </div>
+              
+              <div className="prize-tier second-place">
+                <div className="tier-header">
+                  <div className="rank-badge">🥈</div>
+                  <h4>Second Prize</h4>
                 </div>
-                <div className="prize-item">
-                  <span className="prize-icon">📜</span>
-                  <div className="prize-text">
-                    <h4>Certificates</h4>
-                    <p>For all participants</p>
-                  </div>
+                <div className="prize-amount">₹7,000</div>
+                <div className="prize-details">
+                  <ul>
+                    <li>Cash Prize: ₹7,000</li>
+                    <li>Runner-up Trophy</li>
+                    <li>Certificate of Achievement</li>
+                    <li>Goodies Package</li>
+                    <li>Industry Networking Opportunity</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="prize-tier third-place">
+                <div className="tier-header">
+                  <div className="rank-badge">🥉</div>
+                  <h4>Third Prize</h4>
+                </div>
+                <div className="prize-amount">₹5,000</div>
+                <div className="prize-details">
+                  <ul>
+                    <li>Cash Prize: ₹5,000</li>
+                    <li>Third Place Trophy</li>
+                    <li>Certificate of Recognition</li>
+                    <li>Goodies Package</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Paper Presentation Section */}
+          <div className="competition-section">
+            <div className="section-header">
+              <h3>📄 Paper Presentation</h3>
+              <p>Present your research ideas and technical innovations</p>
+            </div>
+            
+            <div className="prize-tiers">
+              <div className="prize-tier first-place">
+                <div className="tier-header">
+                  <div className="rank-badge">🥇</div>
+                  <h4>First Prize</h4>
+                </div>
+                <div className="prize-amount">₹3,000</div>
+                <div className="prize-details">
+                  <ul>
+                    <li>Cash Prize: ₹3,000</li>
+                    <li>Best Paper Award</li>
+                    <li>Certificate of Excellence</li>
+                    <li>Publication Opportunity</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="prize-tier second-place">
+                <div className="tier-header">
+                  <div className="rank-badge">🥈</div>
+                  <h4>Second Prize</h4>
+                </div>
+                <div className="prize-amount">₹2,000</div>
+                <div className="prize-details">
+                  <ul>
+                    <li>Cash Prize: ₹2,000</li>
+                    <li>Certificate of Achievement</li>
+                    <li>Research Recognition</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="prize-tier third-place">
+                <div className="tier-header">
+                  <div className="rank-badge">🥉</div>
+                  <h4>Third Prize</h4>
+                </div>
+                <div className="prize-amount">₹1,000</div>
+                <div className="prize-details">
+                  <ul>
+                    <li>Cash Prize: ₹1,000</li>
+                    <li>Certificate of Recognition</li>
+                  </ul>
                 </div>
               </div>
             </div>
