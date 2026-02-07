@@ -40,7 +40,7 @@ body {
   max-width: 180px;
 }
 
-.left-logos img[src="/NEW_ISA_Logo.jpg"] {
+.left-logos img[src="/ISA_logo_new.png"] {
   height: 70px;
   align-self: center;
 }
@@ -274,7 +274,7 @@ body {
   max-width: 250px;
 }
 
-.association-logos img[src="/NEW_ISA_Logo.jpg"] {
+.association-logos img[src="/ISA_logo_new.png"] {
   max-width: 250px;
 }
 
@@ -1329,7 +1329,7 @@ body {
     height: 20px;
   }
   
-  .left-logos img[src="/NEW_ISA_Logo.jpg"] {
+  .left-logos img[src="/ISA_logo_new.png"] {
     height: 20px;
   }
   
