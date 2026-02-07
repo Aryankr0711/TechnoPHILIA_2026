@@ -58,8 +58,8 @@ const Registration = () => {
                     className="btn"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = '/brochure_final.pdf';
-                      link.download = 'brochure_final.pdf';
+                      link.href = `${process.env.PUBLIC_URL}/Brochure_final.pdf`;
+                      link.download = 'Brochure_final.pdf';
                       link.click();
                     }}
                   >
