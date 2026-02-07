@@ -2,10 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/brochure_final.pdf';
-    link.download = 'brochure_final.pdf';
-    link.click();
+    window.open('/brochure_final.pdf', '_blank');
   };
 
   const handleRegistration = () => {
