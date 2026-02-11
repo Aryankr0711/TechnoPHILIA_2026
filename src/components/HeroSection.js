@@ -3,8 +3,8 @@ import React from 'react';
 const HeroSection = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/Brochure_final.pdf`;
-    link.download = 'Brochure_final.pdf';
+    link.href = `${process.env.PUBLIC_URL}/Brochure_TechnoPHILIA26_MITAOE.pdf`;
+    link.download = 'Brochure_TechnoPHILIA26_MITAOE.pdf';
     link.click();
   };
 
