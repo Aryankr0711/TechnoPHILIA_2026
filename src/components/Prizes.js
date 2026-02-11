@@ -7,19 +7,14 @@ const Prizes = () => {
         <div className="prizes-header">
           <h2>🏆 Prizes & Recognition</h2>
           <p>Exciting rewards and opportunities await the most innovative minds at TechnoPHILIA 2026!</p>
-          <div className="total-prize-pool">
-            <span className="prize-amount">Total Prize Pool: ₹15,000+</span>
+          <div className="total-prize-pool" style={{background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)', padding: '20px 40px', borderRadius: '50px', boxShadow: '0 8px 25px rgba(255, 215, 0, 0.4)', marginTop: '20px'}}>
+            <span className="prize-amount" style={{fontSize: '2rem', fontWeight: 'bold', color: '#1a237e', textShadow: '2px 2px 4px rgba(0,0,0,0.2)'}}>Total Prize Pool: ₹15,000+</span>
           </div>
         </div>
         
         <div className="prizes-content">
           {/* Project Competition Section */}
           <div className="competition-section">
-            <div className="section-header">
-              <h3>🚀 Project Competition</h3>
-              <p>Showcase your innovative projects and compete for exciting prizes</p>
-            </div>
-            
             <div className="prize-tiers">
               <div className="prize-tier first-place">
                 <div className="tier-header">
@@ -76,11 +71,6 @@ const Prizes = () => {
           
           {/* Paper Presentation Section */}
           <div className="competition-section">
-            <div className="section-header">
-              <h3>📄 Paper Presentation</h3>
-              <p>Present your research ideas and technical innovations</p>
-            </div>
-            
             <div className="prize-tiers">
               <div className="prize-tier first-place">
                 <div className="tier-header">
